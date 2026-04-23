@@ -40,7 +40,7 @@ export default function Dashboard() {
         });
         setEditingId(null); 
       } else {
-        await axios.post('http://localhost:5000/api/items', newItem, { 
+        await axios.post('https://itemmanagement-backend-edn3.onrender.com/api/items', newItem, { 
           headers: { Authorization: `Bearer ${token}` } 
         });
       }

@@ -9,7 +9,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/register', user);
+      await axios.post('https://itemmanagement-backend-edn3.onrender.com/api/register', user);
       alert("Registration Successful!");
       navigate('/');
     } catch (err) { alert(err.response?.data?.msg || "Registration failed"); }

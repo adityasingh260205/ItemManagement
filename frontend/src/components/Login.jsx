@@ -9,7 +9,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/login', creds);
+      const res = await axios.post('https://itemmanagement-backend-edn3.onrender.com/api/login', creds);
       localStorage.setItem('token', res.data.token); 
       navigate('/dashboard');
     } catch (err) { alert("Invalid Credentials"); }
